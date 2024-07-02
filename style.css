@@ -20,6 +20,9 @@ body::-webkit-scrollbar-track {
 .calc input, select, option {
     cursor: pointer;
 }
+.calc ul {
+    list-style-type: none;
+}
 /*
 *=====================
 *   SETTINGS
@@ -125,6 +128,13 @@ body::-webkit-scrollbar-track {
     border: none;
     outline: 2px solid var(--primary-color);
 }
+
+/*======CONTROLS======*/
+.calc__controls-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 .calc__button {
     display: block;  
 
@@ -146,6 +156,12 @@ body::-webkit-scrollbar-track {
     appearance: none;
    
 }
+.calc__button-reset{
+    color: var(--primary-color);
+    background-color: transparent;
+    outline: 1px solid var(--primary-color);
+}
+/*======/CONTROLS======*/
 
 .calc__button:active {
     color: #383838;
