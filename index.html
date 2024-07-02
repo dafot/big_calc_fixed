@@ -23,8 +23,7 @@
                   <li class="calculator__inputs-item calc-item">
                     <!--text-->
                       <div class="calc-item__text-content">
-                        <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">1</span>
+                        <div class="calc-item__wrap">                          
                           <h4 class="calc-item__title">What Caused Your Injury?</h4>                       
                         </div>                              
                       </div>
@@ -49,7 +48,7 @@
                     <!--text-->
                       <div class="calc-item__text-content">
                         <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">2</span>
+                          
                           <h4 class="calc-item__title">When Did the Accident Happen?</h4>                       
                         </div>                                         
                       </div>
@@ -59,6 +58,7 @@
                           <ul class="calc__accident-selects-list">
                             <li class="calc__accident-select-list-item">
                               <select class="calc-item__input" name="day-select" id="day-select">
+                                <option value="">Month</option>
                                 <option value="jan" name="accident-month">January</option>
                                 <option value="feb" name="accident-month">February</option>
                                 <option value="mar" name="accident-month">March</option>
@@ -75,7 +75,7 @@
                             </li>
                             <li class="calc__accident-select-list-item">                              
                               <select class="calc-item__input" name="day-select" id="day-select">
-                                <option value="">Choose day</option>
+                                <option value="">Day</option>
                                 <option value="1"  name="accident-day">1</option>
                                 <option value="2"  name="accident-day">2</option>
                                 <option value="3"  name="accident-day">3</option>
@@ -111,6 +111,7 @@
                             </li>
                             <li class="calc__accident-select-list-item">                                  
                               <select class="calc-item__input" name="day-select" id="day-select">
+                                <option value="">Year</option>
                                 <option value="2024" name="accident-year">2024</option>
                                 <option value="2023" name="accident-year">2023</option>
                                 <option value="2022" name="accident-year">2022</option>
@@ -128,20 +129,19 @@
                   <li class="calculator__inputs-item calc-item">
                     <!--text-->
                       <div class="calc-item__text-content">
-                        <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">3</span>
+                        <div class="calc-item__wrap">                         
                           <h4 class="calc-item__title">Where Did the Accident Happen?</h4>                       
                         </div>                 
                       </div>
                     <!--/text-->
                     <!--input-->
                       <div class="calc-item__input-box">
-                          <select class="calc-item__input" name="accident-place-select" id="accident-place-select">                           
+                          <select class="calc-item__input" name="accident-place-select" id="accident-place-select">
+                            <option value="California">California</option>                           
                             <option value="Florida">Florida</option>
-                            <option value="Texas">Texas</option>
-                            <option value="Illinois">Illinois</option>
-                            <option value="California">California</option>
                             <option value="Georgia">Georgia</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Texas">Texas</option>            
                             <option value="Other">Other</option>
                             <textarea class="calc-item__input calc__manual-input" name="accident-place" id="accident-place"></textarea>
                           </select>
@@ -153,11 +153,13 @@
                   <li class="calculator__inputs-item calc-item">
                     <!--text-->
                       <div class="calc-item__text-content">
-                        <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">4</span>
-                          <h4 class="calc-item__title">Medical Expenses</h4>                       
-                        </div>
-                        <p class="calc-item__descr">The total (current and future) costs of special damages, including medical bills, lost income, property damages, and more</p>                   
+                        <div class="calc-item__wrap">                          
+                          <h4 class="calc-item__title">Medical Expenses</h4>
+                          <span class="calc__tooltip">
+                            <img src="./img/question-icon.svg" alt="question">
+                            <span class="calc__tooltip-value">The total (current and future) costs of special damages, including medical bills, lost income, property damages, and more</span>
+                          </span>                      
+                        </div>                                        
                       </div>
                     <!--/text-->
                     <!--input-->
@@ -172,11 +174,14 @@
                   <li class="calculator__inputs-item calc-item">
                     <!--text-->
                       <div class="calc-item__text-content">
-                        <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">5</span>
-                          <h4 class="calc-item__title">Property Damages</h4>   
+                        <div class="calc-item__wrap">                          
+                          <h4 class="calc-item__title">Property Damages</h4>
+                          <span class="calc__tooltip">
+                            <img src="./img/question-icon.svg" alt="question icon">
+                            <span class="calc__tooltip-value">Typically used for damages in car accident cases. For other types of personal injury claims, you can usually leave this value as zero.</span>
+                          </span>      
                         </div>
-                        <p class="calc-item__descr">Typically used for damages in car accident cases. For other types of personal injury claims, you can usually leave this value as zero.</p>                      
+                                           
                       </div>
                     <!--/text-->
                     <!--input-->
@@ -192,11 +197,16 @@
                     <!--text-->
                       <div class="calc-item__text-content">
                         <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">6</span>
+                         
                           <h4 class="calc-item__title">Lost Income</h4>
-                          
+                          <span class="calc__tooltip">
+                            <img src="./img/question-icon.svg" alt="question icon">
+                            <span class="calc__tooltip-value">
+                              Total sum of a period that you couldn't work due to your injuries
+                            </span>
+                          </span> 
                         </div>
-                        <p class="calc-item__descr">Total sum of a period that you couldn't work due to your injuries</p>                      
+                                           
                       </div>
                     <!--/text-->
                     <!--input-->
@@ -211,11 +221,15 @@
                   <li class="calculator__inputs-item calc-item">
                     <!--text-->
                       <div class="calc-item__text-content">
-                        <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">7</span>
-                          <h4 class="calc-item__title">Future Medical Expenses</h4>                       
-                        </div>
-                        <p class="calc-item__descr">Total cost of anticipated ongoing medical treatment.</p>                      
+                        <div class="calc-item__wrap">                          
+                          <h4 class="calc-item__title">Future Medical Expenses</h4>
+                          <span class="calc__tooltip">
+                            <img src="./img/question-icon.svg" alt="question icon">
+                            <span class="calc__tooltip-value">
+                              Total cost of anticipated ongoing medical treatment.
+                            </span>
+                          </span>                        
+                        </div>                                              
                       </div>
                     <!--/text-->
                     <!--input-->
@@ -230,17 +244,20 @@
                   <li class="calculator__inputs-item calc-item">
                     <!--text-->
                       <div class="calc-item__text-content">
-                        <div class="calc-item__wrap">
-                          <span class="calc-item__descr-num">8</span>
-                          <h4 class="calc-item__title">Multiplier</h4>                        
-                        </div>
-                        <p class="calc-item__descr">Estimate the value of your pain and suffering, including stress, anxiety, and physical discomfort on a scale from 1.5 – 5 with 1.5 being the lowest pain and 5 being constant pain or life debilitating.</p>                      
+                        <div class="calc-item__wrap">                          
+                          <h4 class="calc-item__title">Multiplier</h4>
+                          <span class="calc__tooltip">
+                            <img src="./img/question-icon.svg" alt="question icon">
+                            <span class="calc__tooltip-value">
+                              Estimate the value of your pain and suffering, including stress, anxiety, and physical discomfort on a scale from 1.5 – 5 with 1.5 being the lowest pain and 5 being constant pain or life debilitating.
+                            </span>
+                          </span>                         
+                        </div>                                      
                       </div>
                     <!--/text-->
                     <!--input-->
                     <div class="calc-item__input-box">
-                      <select class="multiplier" name="" id="multiplier">
-                        <option value="1">1</option>
+                      <select class="multiplier" name="multiplier" id="multiplier">                        
                         <option value="1.5">1.5</option>
                         <option value="2">2</option>
                         <option value="2.5">2.5</option>

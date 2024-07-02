@@ -68,9 +68,9 @@ body::-webkit-scrollbar-track {
 
 .calculator__inputs-item{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 20px 0;
+    grid-template-columns: 1fr;    
+    padding-bottom: 10px;
+    padding-top: 10px;
     border-bottom: 1px solid rgb(214, 212, 212);
 }
 
@@ -100,6 +100,9 @@ body::-webkit-scrollbar-track {
 
 .calc-item__wrap{
     display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
 }
 
 .calc-item__input-box{
@@ -179,6 +182,56 @@ body::-webkit-scrollbar-track {
     column-gap: 10px;
     list-style: none;
 }
+/*
+*=====================
+*   TOOLTIPS
+*=====================
+*/
+.calc__tooltip{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    
+    cursor: pointer;
+    position: relative;
+}
+.calc__tooltip img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.calc__tooltip-value{
+    display: flex;
+    min-width: 250px;
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    border-radius: 16px;
+
+
+    background-color: var(--primary-color);
+    color: #fff;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition-property: visibility, opacity;
+    transition-duration: .2s;
+
+}
+.calc__tooltip:hover .calc__tooltip-value {
+    visibility: visible;
+    opacity: 1;
+}
+/*
+*=====================
+*   /TOOLTIPS
+*=====================
+*/
+
+
 /*
 *=====================
 *   MANUAL INPUTS
